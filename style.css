@@ -1,0 +1,774 @@
+/* ==============================
+   1. RESET AND GENERAL STYLES
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #26364a;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 85px 0;
+}
+
+
+/* ==============================
+   2. NAVIGATION
+============================== */
+
+.header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.navbar {
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #25364a;
+}
+
+.logo span {
+    color: #6599e8;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6599e8;
+}
+
+.nav-button {
+    padding: 11px 19px;
+    background-color: #6599e8;
+    color: #ffffff !important;
+    border-radius: 6px;
+}
+
+.nav-button:hover {
+    background-color: #477dcf;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background-color: #eef4ff;
+    color: #477dcf;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* ==============================
+   3. HERO SECTION
+============================== */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 70px 0;
+    background: linear-gradient(
+        120deg,
+        #ffffff 0%,
+        #f8faff 55%,
+        #f0f6ff 100%
+    );
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns:
+        0.65fr
+        1.4fr
+        1.55fr
+        0.55fr;
+
+    align-items: center;
+    gap: 25px;
+}
+
+.hero-label {
+    display: flex;
+    flex-direction: column;
+    color: #6599e8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.9;
+}
+
+.hero-heading h1 {
+    font-size: clamp(38px, 4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    font-weight: 800;
+    overflow-wrap: break-word;
+}
+
+.hero-heading h1 span {
+    display: block;
+    color: #6599e8;
+    margin-top: 8px;
+}
+
+.hero-info p {
+    color: #68768a;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 19px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.primary-button {
+    color: #ffffff;
+    background-color: #6599e8;
+}
+
+.primary-button:hover {
+    background-color: #477dcf;
+}
+
+.learn-more {
+    color: #53647a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.learn-more:hover {
+    color: #477dcf;
+}
+
+
+/* ==============================
+   4. STATISTICS
+============================== */
+
+.hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 8px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat strong {
+    font-size: 17px;
+    color: #26364a;
+}
+
+.stat span {
+    font-size: 13px;
+    color: #68768a;
+}
+
+
+/* ==============================
+   5. SECTION HEADINGS
+============================== */
+
+.section-heading {
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto 45px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #6599e8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2,
+.about-text h2,
+.contact-box h2 {
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.25;
+    margin-bottom: 15px;
+}
+
+.section-heading p,
+.about-text p,
+.contact-box p {
+    color: #68768a;
+}
+
+
+/* ==============================
+   6. COURSES - CSS GRID
+============================== */
+
+.courses {
+    background-color: #ffffff;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.course-card {
+    padding: 30px;
+    border: 1px solid #e6ebf2;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(38, 54, 74, 0.09);
+}
+
+.course-number {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #edf4ff;
+    color: #477dcf;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.course-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.course-card p {
+    font-size: 14px;
+    color: #68768a;
+    margin-bottom: 22px;
+}
+
+.course-card a {
+    color: #477dcf;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.course-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   7. ABOUT SECTION
+============================== */
+
+.about {
+    background-color: #f7f9fd;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+
+.about-visual,
+.about-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-visual {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e9efff, #dcecff);
+    border-radius: 18px;
+}
+
+.about-symbol {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: #6599e8;
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 800;
+    transform: rotate(-8deg);
+    box-shadow: 0 15px 35px rgba(71, 125, 207, 0.2);
+}
+
+.about-text p {
+    margin-bottom: 18px;
+}
+
+.about-text .button {
+    margin-top: 10px;
+}
+
+
+/* ==============================
+   8. CONTACT SECTION
+============================== */
+
+.contact {
+    background-color: #ffffff;
+}
+
+.contact-box {
+    padding: 55px 25px;
+    border-radius: 18px;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f5ff, #e8f3ff);
+}
+
+.contact-box h2 {
+    max-width: 650px;
+    margin: 0 auto 15px;
+}
+
+.contact-box p {
+    max-width: 580px;
+    margin: 0 auto 25px;
+}
+
+.contact-button {
+    color: #ffffff;
+    background-color: #26364a;
+}
+
+.contact-button:hover {
+    background-color: #405571;
+}
+
+
+/* ==============================
+   9. FOOTER
+============================== */
+
+.footer {
+    background-color: #26364a;
+    color: #ffffff;
+    padding: 25px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo {
+    color: #ffffff;
+}
+
+.footer-content p {
+    color: #d0d9e5;
+    font-size: 12px;
+    text-align: center;
+}
+
+.back-to-top {
+    font-size: 13px;
+}
+
+.back-to-top:hover {
+    color: #a9cbff;
+}
+
+
+/* ==============================
+   10. TABLET LAYOUT
+============================== */
+
+@media (max-width: 1000px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr 2fr;
+        gap: 30px;
+    }
+
+    .hero-label {
+        grid-column: 1 / -1;
+    }
+
+    .hero-stats {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        justify-content: space-around;
+        border-top: 1px solid #e4eaf3;
+        padding: 20px 0 0;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-content {
+        gap: 35px;
+    }
+}
+
+
+/* ==============================
+   11. MOBILE LAYOUT
+============================== */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    /* Mobile navigation */
+
+    .navbar {
+        min-height: 70px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px;
+    }
+
+    .nav-links .nav-button {
+        display: inline-block;
+        margin: 5px 0 10px;
+    }
+
+    /* Hero section */
+
+    .hero {
+        min-height: auto;
+        padding: 55px 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .hero-label {
+        grid-column: auto;
+    }
+
+    .hero-heading h1 {
+        font-size: clamp(36px, 10vw, 48px);
+        letter-spacing: -1px;
+    }
+
+    .hero-info p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .hero-stats {
+        grid-column: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 20px;
+    }
+
+    .stat strong {
+        font-size: 16px;
+    }
+
+    .stat span {
+        font-size: 12px;
+    }
+
+    /* Course cards */
+
+    .course-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .course-card {
+        padding: 25px;
+    }
+
+    .section-heading {
+        margin-bottom: 32px;
+    }
+
+    /* About section */
+
+    .about-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .about-visual {
+        min-height: 220px;
+    }
+
+    .about-symbol {
+        width: 120px;
+        height: 120px;
+        font-size: 35px;
+    }
+
+    /* Contact */
+
+    .contact-box {
+        padding: 40px 20px;
+    }
+
+    /* Footer */
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* ==============================
+   12. SMALL MOBILE SCREENS
+============================== */
+
+@media (max-width: 380px) {
+
+    .hero-heading h1 {
+        font-size: 34px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+    }
+}
+
+
+/* ==============================
+   13. ACCESSIBILITY
+============================== */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #477dcf;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+/* Course Learning Sections */
+
+#web-course,
+#python-course,
+#ai-course {
+    background: #f5f7fa;
+    padding: 80px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    scroll-margin-top: 30px;
+}
+
+#web-course .container,
+#python-course .container,
+#ai-course .container {
+    max-width: 850px;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+#web-course h2,
+#python-course h2,
+#ai-course h2 {
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+#web-course h3,
+#python-course h3,
+#ai-course h3 {
+    margin: 25px 0 15px;
+    font-size: 21px;
+}
+
+#web-course p,
+#python-course p,
+#ai-course p {
+    line-height: 1.8;
+    color: #555;
+}
+
+#web-course ol,
+#python-course ol,
+#ai-course ol {
+    padding-left: 25px;
+    margin-bottom: 30px;
+}
+
+#web-course li,
+#python-course li,
+#ai-course li {
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #f5f7fa;
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+#web-course li::marker,
+#python-course li::marker,
+#ai-course li::marker {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    #web-course,
+    #python-course,
+    #ai-course {
+        padding: 45px 15px;
+    }
+
+    #web-course .container,
+    #python-course .container,
+    #ai-course .container {
+        padding: 25px 20px;
+    }
+
+    #web-course h2,
+    #python-course h2,
+    #ai-course h2 {
+        font-size: 25px;
+    }
+}
